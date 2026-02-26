@@ -9,18 +9,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.OverviewViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.OverviewViewController">
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="449.0" prefWidth="600.0">
+            <HBox prefHeight="619.0" prefWidth="800.0">
                <children>
-                  <TableView prefHeight="400.0" prefWidth="363.0">
+                  <TableView prefHeight="600.0" prefWidth="566.0">
                     <columns>
-                      <TableColumn fx:id="tabelTitle" prefWidth="75.0" text="TITLE" />
-                      <TableColumn fx:id="tableArtist" prefWidth="75.0" text="ARTIST" />
-                        <TableColumn fx:id="tableReleaseDate" prefWidth="75.0" text="RELEASE DATE" />
-                        <TableColumn fx:id="tableRentedStatus" prefWidth="75.0" text="RENTEDSTATUS" />
+                      <TableColumn fx:id="tabelTitle" prefWidth="170.40002745389938" text="TITLE" />
+                      <TableColumn fx:id="tableArtist" prefWidth="143.1999969482422" text="ARTIST" />
+                        <TableColumn fx:id="tableReleaseYear" prefWidth="112.79998779296875" text="RELEASE YEAR" />
+                        <TableColumn fx:id="tableRecordState" prefWidth="138.4000244140625" text="RECORD STATE" />
                     </columns>
                   </TableView>
                   <VBox alignment="CENTER" prefHeight="400.0" prefWidth="234.0">

@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.AddRecordViewController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.AddRecordViewController">
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
@@ -59,12 +59,12 @@
                   </VBox>
                   <VBox alignment="TOP_CENTER" prefHeight="77.0" prefWidth="300.0">
                      <children>
-                        <Label fx:id="addRecordDate" alignment="TOP_CENTER" prefHeight="35.0" prefWidth="289.0" text="RELEASE DATE" textAlignment="CENTER">
+                        <Label fx:id="addRecordDate" alignment="TOP_CENTER" prefHeight="35.0" prefWidth="289.0" text="RELEASE YEAR" textAlignment="CENTER">
                            <font>
                               <Font name="System Bold" size="19.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="addRecordArtistTextField" prefHeight="26.0" prefWidth="488.0" />
+                        <TextField fx:id="addRecordReleaseYearTextField" prefHeight="26.0" prefWidth="488.0" />
                      </children>
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
