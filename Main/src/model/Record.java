@@ -26,19 +26,19 @@ public class Record
     this.state = state;
   }
 
-  public String setTitle()
+  public void setTitle(String title)
   {
-    return title;
+    this.title = title;
   }
 
-  public String setArtist()
+  public void setArtist(String artist)
   {
-    return artist;
+    this.artist = artist;
   }
 
-  public int setReleaseYear()
+  public void setReleaseYear(int releaseYear)
   {
-    return releaseYear;
+    this.releaseYear = releaseYear;
   }
 
   public String getTitle()
@@ -71,35 +71,40 @@ public class Record
     return removing;
   }
 
-  public void borrowRecord(Reservation reservedBy)
+  public void borrowRecord(Reservation lendedBy)
   {
-    if(this.reservedBy )
+    if(this.reservedBy != null && this.reservedBy.equals(lendedBy))
     {
-      this.reservedBy = reservedBy;
+      this.lendedBy = lendedBy;
+      this.reservedBy = null;
     }
+    else if(this.reservedBy == null && this.lendedBy == null)
+    {
+      this.lendedBy = lendedBy;
+    }
+
+    state.borrowRecord(this);
   }
 
   public void reserveRecord(Reservation reservedBy)
   {
-    if(this.reservedBy != null)
+    if(this.reservedBy == null)
     {
       this.reservedBy = reservedBy;
     }
+    state.reserveRecord(this);
   }
 
   public void returnRecord()
   {
-
-  }
-
-  public String recordStatus()
-  {
-    return "";
+    state.returnRecord(this);
+    this.lendedBy = null;
   }
 
   public void removeRecord()
   {
 
+    state.removeRecord(this);
   }
 
   public void setRemoving(boolean removingValue)
