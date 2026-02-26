@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controllers.OverviewViewController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="449.0" prefWidth="600.0">
+               <children>
+                  <TableView prefHeight="400.0" prefWidth="363.0">
+                    <columns>
+                      <TableColumn fx:id="tabelTitle" prefWidth="75.0" text="TITLE" />
+                      <TableColumn fx:id="tableArtist" prefWidth="75.0" text="ARTIST" />
+                        <TableColumn fx:id="tableReleaseDate" prefWidth="75.0" text="RELEASE DATE" />
+                        <TableColumn fx:id="tableRentedStatus" prefWidth="75.0" text="RENTEDSTATUS" />
+                    </columns>
+                  </TableView>
+                  <VBox alignment="CENTER" prefHeight="400.0" prefWidth="234.0">
+                     <children>
+                        <Button fx:id="rentButton" mnemonicParsing="false" onAction="#actionButtonPressed" prefHeight="50.0" prefWidth="100.0" text="RENT">
+                           <VBox.margin>
+                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="returnButton" mnemonicParsing="false" onAction="#actionButtonPressed" prefHeight="50.0" prefWidth="100.0" text="RETURN">
+                           <VBox.margin>
+                              <Insets bottom="30.0" left="30.0" right="30.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="reserveButton" mnemonicParsing="false" onAction="#actionButtonPressed" prefHeight="50.0" prefWidth="100.0" text="RESERVE">
+                           <VBox.margin>
+                              <Insets bottom="30.0" left="30.0" right="30.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="addRecordButton" mnemonicParsing="false" onAction="#actionButtonPressed" prefHeight="50.0" prefWidth="100.0" text="ADD RECORD">
+                           <VBox.margin>
+                              <Insets bottom="30.0" left="30.0" right="30.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#actionButtonPressed" prefHeight="50.0" prefWidth="100.0" text="DELETE">
+                           <VBox.margin>
+                              <Insets bottom="30.0" left="30.0" right="30.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
