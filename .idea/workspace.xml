@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9152928-d86f-4fe2-bf33-ce94d47e85d9" name="Changes" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/Main/src/viewmodel/AddRecordViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/src/viewmodel/OverviewViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/src/viewmodel/RecordViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Main/src/viewmodel/ViewModelFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/model/ModelManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/model/ModelManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/model/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/model/Record.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/model/RecordList.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/model/RecordList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/viewmodel/ViewState.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/viewmodel/ViewState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/view/ViewHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/view/controllers/AddRecordViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/view/controllers/AddRecordViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/view/controllers/OverviewViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/view/controllers/OverviewViewController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,17 +69,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\flugt\IdeaProjects\Kursusopgave---1\Main\src\view\fxml" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
