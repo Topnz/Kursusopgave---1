@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9152928-d86f-4fe2-bf33-ce94d47e85d9" name="Changes" comment="Commit">
+    <list default="true" id="a9152928-d86f-4fe2-bf33-ce94d47e85d9" name="Changes" comment="Main">
+      <change afterPath="$PROJECT_DIR$/Main/src/Simulation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/view/ViewHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/view/ViewHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/view/controllers/AddRecordViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/view/controllers/AddRecordViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/view/controllers/OverviewViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/view/controllers/OverviewViewController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +46,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.Kursusopgave.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
@@ -68,6 +67,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\flugt\IdeaProjects\Kursusopgave---1\Main\src" />
       <recent name="C:\Users\flugt\IdeaProjects\Kursusopgave---1\Main\src\view\fxml" />
     </key>
   </component>
@@ -128,31 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772190145629</updated>
     </task>
-    <task id="LOCAL-00007" summary="Commit">
+    <task id="LOCAL-00007" summary="Main">
       <option name="closed" value="true" />
-      <created>1772198269609</created>
+      <created>1772200728597</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1772198269609</updated>
+      <updated>1772200728597</updated>
     </task>
-    <task id="LOCAL-00008" summary="Commit">
-      <option name="closed" value="true" />
-      <created>1772198420644</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1772198420644</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Commit">
-      <option name="closed" value="true" />
-      <created>1772199548690</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1772199548690</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +144,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main" />
   </component>
 </project>

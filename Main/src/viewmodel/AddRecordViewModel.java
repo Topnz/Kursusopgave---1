@@ -47,4 +47,11 @@ public class AddRecordViewModel
   {
     return recordTitle;
   }
+
+  public void clear()
+  {
+    this.recordTitle = new SimpleStringProperty("");
+    this.recordArtist = new SimpleStringProperty("");
+    this.recordReleaseYear = new SimpleIntegerProperty(-1);
+  }
 }
