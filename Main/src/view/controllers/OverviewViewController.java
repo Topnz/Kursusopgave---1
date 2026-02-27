@@ -3,27 +3,28 @@ package view.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Region;
 import view.ViewHandler;
+import viewmodel.OverviewViewModel;
 
 import javax.swing.table.TableColumn;
 
 public class OverviewViewController
 {
 
-  @FXML private TableColumn<OverViewViewModel, String> tableTitle;
-  @FXML private TableColumn<OverViewViewModel, String> tableArtist;
-  @FXML private TableColumn<OverViewViewModel, String> tableReleaseDate;
-  @FXML private TableColumn<OverViewViewModel, String> tableRentedStatus;
+  @FXML private TableColumn<OverviewViewModel, String> tableTitle;
+  @FXML private TableColumn<OverviewViewModel, String> tableArtist;
+  @FXML private TableColumn<OverviewViewModel, String> tableReleaseDate;
+  @FXML private TableColumn<OverviewViewModel, String> tableRentedStatus;
   private Region root;
 
   private ViewHandler viewHandler;
   private Region root;
-  private OverViewViewModel overViewViewModel;
+  private OverviewViewModel overViewViewModel;
 
   OverviewViewController()
   {
     //called by FXML loader
   }
-  public void init(ViewHandler viewHandler, OverViewModel overViewModel,
+  public void init(ViewHandler viewHandler, OverviewModel overViewModel,
       Region root)
   {
     this.viewHandler = viewHandler;
@@ -52,7 +53,7 @@ public class OverviewViewController
 
   public void reset()
   {
-    OverViewViewModel.clear();
+    OverviewViewModel.clear();
   }
 
   public Region getRoot()
