@@ -8,14 +8,15 @@ import viewmodel.OverviewViewModel;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.Button;
+import viewmodel.RecordViewModel;
 
 public class OverviewViewController
 {
 
-  @FXML private TableColumn<OverviewViewModel, String> tableTitle;
-  @FXML private TableColumn<OverviewViewModel, String> tableArtist;
-  @FXML private TableColumn<OverviewViewModel, String> tableReleaseDate;
-  @FXML private TableColumn<OverviewViewModel, String> tableRentedStatus;
+  @FXML private TableColumn<RecordViewModel, String> tableTitle;
+  @FXML private TableColumn<RecordViewModel, String> tableArtist;
+  @FXML private TableColumn<RecordViewModel, String> tableReleaseDate;
+  @FXML private TableColumn<RecordViewModel, String> tableRentedStatus;
 
 
   private ViewHandler viewHandler;
@@ -33,21 +34,13 @@ public class OverviewViewController
     this.overviewViewModel = overviewViewModel;
     this.root = root;
 
-    tableTitle.setCellValueFactory(cellData -> cellData.getValue().
+    tableTitle.setCellValueFactory(cellData -> cellData.getValue().getTitle());
 
-        getTableTitleProperty());
+    tableArtist.setCellValueFactory(cellData -> cellData.getValue().getArtist());
 
-    tableArtist.setCellValueFactory(cellData -> cellData.getValue().
+    tableReleaseDate.setCellValueFactory(cellData -> cellData.getValue().getReleaseDate());
 
-        getTableArtistProperty());
-
-    tableReleaseDate.setCellValueFactory(cellData -> cellData.getValue().
-
-        getTableReleaseDateProperty());
-
-    tableRentedStatus.setCellValueFactory(cellData -> cellData.getValue().
-
-        getTableRentedStatusProperty());
+    tableRentedStatus.setCellValueFactory(cellData -> cellData.getValue().getRentedStatus());
 
     reset();
   }

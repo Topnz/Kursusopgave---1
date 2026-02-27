@@ -1,9 +1,11 @@
 package view.controllers;
 
+import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
+import javafx.util.StringConverter;
 import view.ViewHandler;
 import viewmodel.AddRecordViewModel;
 import javafx.event.ActionEvent;
@@ -31,9 +33,30 @@ public class AddRecordViewController
     this.addRecordViewModel = addRecordViewModel;
     this.root = root;
 
-    addRecordArtistTextField.textProperty().bindBidirectional(addRecordViewModel.getAddRecordArtistProperty());
-    addRecordTitleTextField.textProperty().bindBidirectional(addRecordViewModel.getAddRecordTitleProperty());
-    addRecordReleaseYearTextField.textProperty().bindBidirectional(addRecordViewModel.getAddRecordReleaseYearProperty());
+    addRecordArtistTextField.textProperty().bindBidirectional(addRecordViewModel.getRecordArtist());
+    addRecordTitleTextField.textProperty().bindBidirectional(addRecordViewModel.getRecordTitle());
+    Bindings.bindBidirectional(addRecordReleaseYearTextField.textProperty(),
+        addRecordViewModel.getRecordReleaseYear(), new StringConverter<Number>()
+        {
+          @Override public String toString(Number object)
+          {
+            if(object == null || object.intValue()==0)
+              return "";
+            else return object.toString();
+          }
+
+          @Override public Number fromString(String string)
+          {
+            try
+            {
+              return Integer.parseInt(string);
+            }
+            catch (Exception e)
+            {
+              return 0;
+            }
+          }
+        });
 
     reset();
   }
