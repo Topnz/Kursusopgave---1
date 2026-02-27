@@ -26,16 +26,19 @@ public class ModelManager implements Model
 
   @Override public void reserveRecord(int index, Reservation reservedBy)
   {
-
+    Record record = recordList.getRecord(index);
+    record.reserveRecord(reservedBy);
   }
 
-  @Override public void returnRecord()
+  @Override public void returnRecord(int index)
   {
-
+    Record record = recordList.getRecord(index);
+    record.returnRecord();
   }
 
   @Override public void borrowRecord(int index, Reservation lentBy)
   {
-
+    Record record = recordList.getRecord(index);
+    record.borrowRecord(lentBy);
   }
 }

@@ -6,6 +6,6 @@ public interface Model
   void removeRecord(Record record);
   int getRecord(String id);
   void reserveRecord(int index, Reservation reservedBy);
-  void returnRecord();
+  void returnRecord(int index);
   void borrowRecord(int index, Reservation lentBy);
 }
