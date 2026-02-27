@@ -94,6 +94,11 @@ public class Record implements NamedPropertyChangeSubject
     state.borrowRecord(this, lentBy);
   }
 
+  public String getStateName()
+  {
+    return state.getClass().getSimpleName();
+  }
+
   public void reserveRecord(Reservation reservedBy)
   {
     state.reserveRecord(this);

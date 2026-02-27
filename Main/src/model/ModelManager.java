@@ -19,6 +19,11 @@ public class ModelManager implements Model
     recordList.removeRecord(record);
   }
 
+  @Override public Record getRecordIndex(int index)
+  {
+    return recordList.getRecord(index);
+  }
+
   @Override public int getRecord(String id)
   {
     return 0;
@@ -40,5 +45,11 @@ public class ModelManager implements Model
   {
     Record record = recordList.getRecord(index);
     record.borrowRecord(lentBy);
+  }
+
+
+  @Override public int getListSize()
+  {
+    return (recordList.getListSize());
   }
 }

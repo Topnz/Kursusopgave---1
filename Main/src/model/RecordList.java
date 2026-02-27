@@ -13,6 +13,11 @@ public class RecordList implements PropertyChangeListener
     this.records = new ArrayList<>();
   }
 
+  public int getListSize()
+  {
+    return records.size();
+  }
+
   public Record getRecord(int index)
   {
     return records.get(index);
