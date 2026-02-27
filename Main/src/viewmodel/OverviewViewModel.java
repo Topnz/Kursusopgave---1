@@ -107,4 +107,9 @@ public class OverviewViewModel
       }
     }
   }
+
+  public void clear()
+  {
+
+  }
 }
