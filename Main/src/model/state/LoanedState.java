@@ -16,6 +16,7 @@ public class LoanedState extends RecordState
   @Override
   public void returnRecord(Record record)
   {
-    record.setState(new AvailableState());
+    record.setLentBy(null);
+    record.setState(new AvailableState(record));
   }
 }

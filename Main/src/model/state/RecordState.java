@@ -1,26 +1,27 @@
 package model.state;
 
 import model.Record;
+import model.Reservation;
 
 public abstract class RecordState
 {
-  public void reserveRecord(model.Record record)
+  public void reserveRecord(Record record)
   {
-    //Will be overridden
+    throw new IllegalStateException("Can't reserve in " + getClass().getSimpleName());
   }
 
-  public void borrowRecord(model.Record record)
+  public void borrowRecord(Record record, Reservation lendedBy)
   {
-    //Will be overridden
+    throw new IllegalStateException("Can't borrow in " + getClass().getSimpleName());
   }
 
-  public void removeRecord(model.Record record)
+  public void removeRecord(Record record)
   {
     record.setRemoving(true);
   }
 
   public void returnRecord(Record record)
   {
-    //Will be overridden
+    throw new IllegalStateException("Can't return in " + getClass().getSimpleName());
   }
 }

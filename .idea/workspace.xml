@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9152928-d86f-4fe2-bf33-ce94d47e85d9" name="Changes" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/Main/src/model/RecordList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/model/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/model/Record.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/model/state/AvailableState.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/model/state/AvailableState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/model/state/LoanedAndReservedState.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/model/state/LoanedAndReservedState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/model/state/LoanedState.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/model/state/LoanedState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/model/state/RecordState.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/model/state/RecordState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/model/state/ReservedState.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/model/state/ReservedState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,21 +30,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Topnz"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Topnz&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Topnz/Kursusopgave---1.git",
-    "accountId": "b3ac107d-b157-4fc1-a77e-a7b1d2752cd9"
+    "accountId": "23a3fcac-b814-4977-96d4-b2b29c97b650"
   }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="3ACXr3GInyJrIuEqv3WEevUDVsx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,16 +55,36 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\flugt\IdeaProjects\Kursusopgave---1\Main\src\view\fxml" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -66,6 +93,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1772097721854</updated>
+      <workItem from="1772183360552" duration="3735000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <option name="closed" value="true" />
@@ -101,6 +129,9 @@
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit" />

@@ -1,22 +1,30 @@
 package model.state;
 
 import model.Record;
+import model.Reservation;
 
 public class AvailableState extends RecordState
 {
-  @Override public void borrowRecord(model.Record record)
+  public AvailableState(Record record)
   {
-    if(!record.isRemoving())
+    if (record.isRemoving())
     {
-      record.setState(new LoanedState());
+      record.fireRemoveEvent();
     }
+  }
+
+  @Override public void borrowRecord(Record record, Reservation lendedBy)
+  {
+    record.setState(new LoanedState());
   }
 
   @Override public void reserveRecord(Record record)
   {
-    if(!record.isRemoving())
-    {
-      record.setState(new ReservedState());
-    }
+    record.setState(new ReservedState());
+  }
+
+  @Override public void removeRecord(Record record)
+  {
+    record.fireRemoveEvent();
   }
 }

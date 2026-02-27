@@ -1,16 +1,21 @@
 package model;
 
 import model.state.RecordState;
+import utility.observer.NamedPropertyChangeSubject;
 
-public class Record
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+
+public class Record implements NamedPropertyChangeSubject
 {
   private String title;
   private String artist;
   private int releaseYear;
   private boolean removing;
   private Reservation reservedBy;
-  private Reservation lendedBy;
+  private Reservation lentBy;
   private RecordState state;
+  private PropertyChangeSupport property;
 
   public Record(String title, String artist, int releaseYear)
   {
@@ -19,6 +24,8 @@ public class Record
     this.releaseYear = releaseYear;
     this.removing = false;
     this.reservedBy = null;
+    this.lentBy = null;
+    this.property = new PropertyChangeSupport(this);
   }
 
   public void setState(RecordState state)
@@ -41,6 +48,16 @@ public class Record
     this.releaseYear = releaseYear;
   }
 
+  public void setLentBy(Reservation lentBy)
+  {
+    this.lentBy = lentBy;
+  }
+
+  public void setReservedBy(Reservation reservedBy)
+  {
+    this.reservedBy = reservedBy;
+  }
+
   public String getTitle()
   {
     return title;
@@ -56,9 +73,9 @@ public class Record
     return releaseYear;
   }
 
-  public Reservation getLendedBy()
+  public Reservation getLentBy()
   {
-    return lendedBy;
+    return lentBy;
   }
 
   public Reservation getReservedBy()
@@ -71,44 +88,51 @@ public class Record
     return removing;
   }
 
-  public void borrowRecord(Reservation lendedBy)
+  public void borrowRecord(Reservation lentBy)
   {
-    if(this.reservedBy != null && this.reservedBy.equals(lendedBy))
-    {
-      this.lendedBy = lendedBy;
-      this.reservedBy = null;
-    }
-    else if(this.reservedBy == null && this.lendedBy == null)
-    {
-      this.lendedBy = lendedBy;
-    }
 
-    state.borrowRecord(this);
+    state.borrowRecord(this, lentBy);
   }
 
   public void reserveRecord(Reservation reservedBy)
   {
-    if(this.reservedBy == null)
-    {
-      this.reservedBy = reservedBy;
-    }
     state.reserveRecord(this);
   }
 
   public void returnRecord()
   {
     state.returnRecord(this);
-    this.lendedBy = null;
   }
 
   public void removeRecord()
   {
-
     state.removeRecord(this);
   }
 
   public void setRemoving(boolean removingValue)
   {
     this.removing = removingValue;
+  }
+
+  public void fireRemoveEvent()
+  {
+    property.firePropertyChange(toString(), false, true);
+  }
+
+  @Override public void addListener(String propertyName,
+      PropertyChangeListener listener)
+  {
+    property.addPropertyChangeListener(propertyName, listener);
+  }
+
+  @Override public void removeListener(String propertyName,
+      PropertyChangeListener listener)
+  {
+    property.removePropertyChangeListener(propertyName, listener);
+  }
+
+  @Override public String toString()
+  {
+    return title + " " + artist + " " + releaseYear;
   }
 }
