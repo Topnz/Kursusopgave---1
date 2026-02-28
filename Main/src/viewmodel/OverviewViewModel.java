@@ -110,6 +110,6 @@ public class OverviewViewModel
 
   public void clear()
   {
-
+    list.clear();
   }
 }
