@@ -1,6 +1,8 @@
 package model;
 
-public interface Model
+import utility.observer.NamedPropertyChangeSubject;
+
+public interface Model extends NamedPropertyChangeSubject
 {
   void addRecord(Record record);
   void removeRecord(Record record);

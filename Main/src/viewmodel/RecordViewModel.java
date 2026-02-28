@@ -5,6 +5,7 @@ import model.Record;
 
 public class RecordViewModel
 {
+  private Record record;
   private StringProperty title;
   private StringProperty artist;
   private IntegerProperty releaseDate;
@@ -12,6 +13,7 @@ public class RecordViewModel
 
   public RecordViewModel(Record record)
   {
+    this.record = record;
     this.title = new SimpleStringProperty(record.getTitle());
     this.artist = new SimpleStringProperty(record.getArtist());
     this.releaseDate = new SimpleIntegerProperty(record.getReleaseYear());
@@ -36,5 +38,10 @@ public class RecordViewModel
   public StringProperty getRentedStatus()
   {
     return rentedStatus;
+  }
+
+  public Record getRecord()
+  {
+    return record;
   }
 }

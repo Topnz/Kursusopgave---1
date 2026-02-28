@@ -36,8 +36,7 @@ public class Record implements NamedPropertyChangeSubject
 
   public void setTitle(String title)
   {
-    if (title == null || title.isEmpty() || title.length() > 30)
-      throw new IllegalArgumentException("Title must be between 1 and 30 characters.");
+    if (title == null || title.isEmpty() || title.length() > 40) throw new IllegalArgumentException("Title must be between 1 and 40 characters.");
     this.title = title;
   }
 
@@ -45,15 +44,13 @@ public class Record implements NamedPropertyChangeSubject
   {
     if (artist == null || artist.isEmpty() || artist.length() > 30)
       throw new IllegalArgumentException("Artist must be between 1 and 30 characters.");
-    if (!artist.matches("[a-zA-Z .'-]+"))
-      throw new IllegalArgumentException("Artist must only contain letters.");
     this.artist = artist;
   }
 
   public void setReleaseYear(int releaseYear)
   {
-    if (releaseYear < 1800 || releaseYear > 2026)
-      throw new IllegalArgumentException("Release year must be exactly 4 digits.");
+   if (releaseYear < 1800 || releaseYear > 2026)
+     throw new IllegalArgumentException("Release year must be exactly 4 digits.");
     this.releaseYear = releaseYear;
   }
 

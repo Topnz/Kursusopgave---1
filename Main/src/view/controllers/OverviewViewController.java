@@ -17,17 +17,18 @@ import viewmodel.RecordViewModel;
 public class OverviewViewController
 {
 
+  @FXML private TableView<RecordViewModel> table;
   @FXML private TableColumn<RecordViewModel, String> tableTitle;
   @FXML private TableColumn<RecordViewModel, String> tableArtist;
   @FXML private TableColumn<RecordViewModel, String> tableReleaseYear;
-  @FXML private TableColumn<RecordViewModel, String> tableRentedStatus;
+  @FXML private TableColumn<RecordViewModel, String> tableRecordState;
 
 
   private ViewHandler viewHandler;
   private Region root;
   private OverviewViewModel overviewViewModel;
 
-  OverviewViewController()
+  public OverviewViewController()
   {
     //called by FXML loader
   }
@@ -47,7 +48,16 @@ public class OverviewViewController
     return new SimpleStringProperty(releaseYear + "");
     });
 
-    tableRentedStatus.setCellValueFactory(cellData -> cellData.getValue().getRentedStatus());
+    tableRecordState.setCellValueFactory(cellData -> cellData.getValue().getRentedStatus());
+
+    table.setItems(overviewViewModel.getList());
+
+    table.getSelectionModel().selectedItemProperty().addListener((obs, old, newVal) -> {
+      if (newVal != null)
+      {
+        overviewViewModel.setSelectedRecord(newVal.getRecord());
+      }
+    });
 
     reset();
   }
@@ -55,7 +65,7 @@ public class OverviewViewController
 
   public void reset()
   {
-    overviewViewModel.clear();
+    overviewViewModel.update();
   }
 
   public Region getRoot()
@@ -74,6 +84,7 @@ public class OverviewViewController
   private void reserveButton()
   {
     overviewViewModel.reserveRecord();
+
   }
 
   @FXML
@@ -91,7 +102,7 @@ public class OverviewViewController
   @FXML
   private void returnButton()
   {
-    viewHandler.openView("overview");
+    overviewViewModel.returnRecord();
   }
 
 

@@ -27,7 +27,8 @@ public class ViewHandler
     openView("overview");
   }
 
-  public void openView(String id){
+  public void openView(String id)
+  {
     Region root = null;
     switch (id)
     {

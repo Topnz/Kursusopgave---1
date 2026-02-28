@@ -28,6 +28,6 @@ public class Reservation
     if (obj == null || getClass() != obj.getClass())
       return false;
     Reservation that = (Reservation) obj;
-    return Objects.equals(name, that.name) && Objects.equals(time, that.time);
+    return Objects.equals(name, that.name);
   }
 }

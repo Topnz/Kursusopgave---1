@@ -33,8 +33,9 @@ public class AddRecordViewController
     this.addRecordViewModel = addRecordViewModel;
     this.root = root;
 
-    addRecordArtistTextField.textProperty().bindBidirectional(addRecordViewModel.getRecordArtist());
     addRecordTitleTextField.textProperty().bindBidirectional(addRecordViewModel.getRecordTitle());
+    addRecordArtistTextField.textProperty().bindBidirectional(addRecordViewModel.getRecordArtist());
+
     Bindings.bindBidirectional(addRecordReleaseYearTextField.textProperty(),
         addRecordViewModel.getRecordReleaseYear(), new StringConverter<Number>()
         {
@@ -77,7 +78,7 @@ public class AddRecordViewController
       boolean addRecord = addRecordViewModel.addRecord();
       if (addRecord)
       {
-        viewHandler.openView("Overview");
+        viewHandler.openView("overview");
       }
   }
 

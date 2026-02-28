@@ -24,20 +24,24 @@ public class AddRecordViewModel
 
     this.recordTitle = new SimpleStringProperty("");
     this.recordArtist = new SimpleStringProperty("");
-    this.recordReleaseYear = new SimpleIntegerProperty(-1);
+    this.recordReleaseYear = new SimpleIntegerProperty(0);
   }
 
   public boolean addRecord()
   {
-    try {
+    try
+    {
       Record record = new Record(recordTitle.get(), recordArtist.get(), recordReleaseYear.get());
       model.addRecord(record);
       return true;
     }
     catch (Exception e){
+      e.printStackTrace();
       return false;
     }
   }
+
+
 
   public StringProperty getRecordArtist()
   {
@@ -56,8 +60,8 @@ public class AddRecordViewModel
 
   public void clear()
   {
-    this.recordTitle = new SimpleStringProperty("");
-    this.recordArtist = new SimpleStringProperty("");
-    this.recordReleaseYear = new SimpleIntegerProperty(-1);
+    this.recordTitle.set("");
+    this.recordArtist.set("");
+    this.recordReleaseYear.set(0);
   }
 }

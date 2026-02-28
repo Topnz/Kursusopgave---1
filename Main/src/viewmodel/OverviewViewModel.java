@@ -1,5 +1,6 @@
 package viewmodel;
 
+import javafx.application.Platform;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -8,19 +9,30 @@ import model.Model;
 import model.Record;
 import model.Reservation;
 
-public class OverviewViewModel
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
+public class OverviewViewModel implements PropertyChangeListener
 {
   private ObservableList<RecordViewModel> list;
   private Model model;
   private ViewState viewState;
-  private StringProperty errorProperty;
 
   public OverviewViewModel(Model model, ViewState viewState)
   {
     this.model = model;
     this.viewState = viewState;
 
+    model.addListener("add", this);
+    model.addListener("remove", this);
+    model.addListener("borrow", this);
+    model.addListener("reserve", this);
+    model.addListener("return", this);
+
+
     this.list = FXCollections.observableArrayList();
+
+    update();
   }
 
   public ObservableList<RecordViewModel> getList()
@@ -38,11 +50,6 @@ public class OverviewViewModel
     }
   }
 
-  public void addRecord(Record record)
-  {
-    model.addRecord(record);
-  }
-
   public void deleteRecord()
   {
     Record record = viewState.getSelectedRecord();
@@ -50,6 +57,8 @@ public class OverviewViewModel
     {
       model.removeRecord(record);
     }
+
+    update();
   }
 
   public void borrowRecord()
@@ -68,9 +77,11 @@ public class OverviewViewModel
       }
       catch (IllegalStateException e)
       {
-        errorProperty.set(e.getMessage());
+
       }
     }
+
+    update();
   }
 
   public void returnRecord()
@@ -86,9 +97,11 @@ public class OverviewViewModel
       }
       catch (IllegalStateException e)
       {
-        errorProperty.set(e.getMessage());
+
       }
     }
+
+    update();
   }
 
   public void reserveRecord()
@@ -107,13 +120,27 @@ public class OverviewViewModel
       }
       catch (IllegalStateException e)
       {
-        errorProperty.set(e.getMessage());
+
       }
     }
+
+    update();
+  }
+
+  public void setSelectedRecord(Record record)
+  {
+    viewState.setSelectedRecord(record);
   }
 
   public void clear()
   {
     list.clear();
+  }
+
+  @Override public void propertyChange(PropertyChangeEvent evt)
+  {
+    Platform.runLater(() -> {
+      update();
+    });
   }
 }
