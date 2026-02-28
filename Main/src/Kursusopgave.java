@@ -13,6 +13,7 @@ public class Kursusopgave extends Application
   public void start(Stage primaryStage)
   {
     Model model = new ModelManager();
+    Simulation simulation = new Simulation(model);
     ViewState viewState = new ViewState();
     ViewModelFactory factory = new ViewModelFactory(model, viewState);
     ViewHandler view = new ViewHandler(factory);

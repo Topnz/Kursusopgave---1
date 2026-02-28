@@ -19,13 +19,14 @@ public class Record implements NamedPropertyChangeSubject
 
   public Record(String title, String artist, int releaseYear)
   {
-    this.title = title;
-    this.artist = artist;
-    this.releaseYear = releaseYear;
+    setTitle(title);
+    setArtist(artist);
+    setReleaseYear(releaseYear);
     this.removing = false;
     this.reservedBy = null;
     this.lentBy = null;
     this.property = new PropertyChangeSupport(this);
+    this.state = new model.state.AvailableState(this);
   }
 
   public void setState(RecordState state)
@@ -35,16 +36,24 @@ public class Record implements NamedPropertyChangeSubject
 
   public void setTitle(String title)
   {
+    if (title == null || title.isEmpty() || title.length() > 30)
+      throw new IllegalArgumentException("Title must be between 1 and 30 characters.");
     this.title = title;
   }
 
   public void setArtist(String artist)
   {
+    if (artist == null || artist.isEmpty() || artist.length() > 30)
+      throw new IllegalArgumentException("Artist must be between 1 and 30 characters.");
+    if (!artist.matches("[a-zA-Z .'-]+"))
+      throw new IllegalArgumentException("Artist must only contain letters.");
     this.artist = artist;
   }
 
   public void setReleaseYear(int releaseYear)
   {
+    if (releaseYear < 1800 || releaseYear > 2026)
+      throw new IllegalArgumentException("Release year must be exactly 4 digits.");
     this.releaseYear = releaseYear;
   }
 
@@ -101,6 +110,7 @@ public class Record implements NamedPropertyChangeSubject
 
   public void reserveRecord(Reservation reservedBy)
   {
+    this.reservedBy = reservedBy;
     state.reserveRecord(this);
   }
 
