@@ -5,7 +5,7 @@ import model.Record;
 public class LoanedState extends RecordState
 {
   @Override
-  public void reserveRecord(model.Record record)
+  public void reserveRecord(Record record)
   {
     if(!record.isRemoving())
     {
