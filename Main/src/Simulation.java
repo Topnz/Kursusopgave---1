@@ -44,13 +44,13 @@ public class Simulation
     model.addRecord(new Record("Automatic for the People", "R.E.M.", 1992));
     model.addRecord(new Record("The Wall", "Pink Floyd", 1979));
 
-/*
+
     for (String customer : customers)
     {
       startCustomerThread(customer);
     }
 
- */
+
   }
 
   private void startCustomerThread(String customerName)
