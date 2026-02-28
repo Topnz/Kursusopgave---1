@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9152928-d86f-4fe2-bf33-ce94d47e85d9" name="Changes" comment="Main">
+    <list default="true" id="a9152928-d86f-4fe2-bf33-ce94d47e85d9" name="Changes" comment="State &amp; observer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/view/controllers/OverviewViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/view/controllers/OverviewViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/viewmodel/OverviewViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/viewmodel/OverviewViewModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -47,8 +46,6 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Kursusopgave.executor": "Run",
-    "Application.Main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -60,6 +57,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -69,31 +67,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\flugt\IdeaProjects\Kursusopgave---1\Main\src" />
       <recent name="C:\Users\flugt\IdeaProjects\Kursusopgave---1\Main\src\view\fxml" />
     </key>
-  </component>
-  <component name="RunManager" selected="Application.Kursusopgave">
-    <configuration name="Kursusopgave" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Kursusopgave" />
-      <module name="Main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Kursusopgave" />
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -152,15 +127,7 @@
       <option name="project" value="LOCAL" />
       <updated>1772190145629</updated>
     </task>
-    <task id="LOCAL-00007" summary="Main">
-      <option name="closed" value="true" />
-      <created>1772200728597</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1772200728597</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,7 +135,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit" />
-    <MESSAGE value="Main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
 </project>
