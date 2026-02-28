@@ -27,10 +27,16 @@ public class AddRecordViewModel
     this.recordReleaseYear = new SimpleIntegerProperty(-1);
   }
 
-  public void addRecord()
+  public boolean addRecord()
   {
-    Record record = new Record(recordTitle.get(), recordArtist.get(), recordReleaseYear.get());
-    model.addRecord(record);
+    try {
+      Record record = new Record(recordTitle.get(), recordArtist.get(), recordReleaseYear.get());
+      model.addRecord(record);
+      return true;
+    }
+    catch (Exception e){
+      return false;
+    }
   }
 
   public StringProperty getRecordArtist()

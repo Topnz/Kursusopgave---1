@@ -43,9 +43,13 @@ public class OverviewViewModel
     model.addRecord(record);
   }
 
-  public void deleteRecord(Record record)
+  public void deleteRecord()
   {
-    model.removeRecord(record);
+    Record record = viewState.getSelectedRecord();
+    if (record != null)
+    {
+      model.removeRecord(record);
+    }
   }
 
   public void borrowRecord()

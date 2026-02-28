@@ -1,8 +1,11 @@
 package view.controllers;
 
+import javafx.beans.binding.Bindings;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Region;
+import javafx.util.StringConverter;
 import view.ViewHandler;
 import viewmodel.OverviewViewModel;
 import javafx.scene.control.TableColumn;
@@ -16,7 +19,7 @@ public class OverviewViewController
 
   @FXML private TableColumn<RecordViewModel, String> tableTitle;
   @FXML private TableColumn<RecordViewModel, String> tableArtist;
-  @FXML private TableColumn<RecordViewModel, String> tableReleaseDate;
+  @FXML private TableColumn<RecordViewModel, String> tableReleaseYear;
   @FXML private TableColumn<RecordViewModel, String> tableRentedStatus;
 
 
@@ -39,7 +42,10 @@ public class OverviewViewController
 
     tableArtist.setCellValueFactory(cellData -> cellData.getValue().getArtist());
 
-    tableReleaseDate.setCellValueFactory(cellData -> cellData.getValue().getReleaseDate());
+    tableReleaseYear.setCellValueFactory(cellData -> {
+      int releaseYear = cellData.getValue().getReleaseDate().get();
+    return new SimpleStringProperty(releaseYear + "");
+    });
 
     tableRentedStatus.setCellValueFactory(cellData -> cellData.getValue().getRentedStatus());
 
@@ -49,7 +55,7 @@ public class OverviewViewController
 
   public void reset()
   {
-    OverviewViewModel.clear();
+    overviewViewModel.clear();
   }
 
   public Region getRoot()

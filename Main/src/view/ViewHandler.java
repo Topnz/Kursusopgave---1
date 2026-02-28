@@ -32,9 +32,9 @@ public class ViewHandler
     switch (id)
     {
       case "overview":
-        root = loadOverviewView("overview.fxml"); break;
+        root = loadOverviewView("/view/fxml/overview.fxml"); break;
       case "addrecord":
-        root = loadAddRecordView("addrecord.fxml"); break;
+        root = loadAddRecordView("/view/fxml/addrecord.fxml"); break;
     }
     currentScene.setRoot(root);
     String title = "";
